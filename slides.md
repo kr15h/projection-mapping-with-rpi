@@ -178,25 +178,43 @@ make && make run```
 
 ---
 
+## Step 5
+
+### Usage
+
+- **Launch ofxPiMapper fullscreen by using the -f flag**```
+/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f```
+
+- **Use mouse, keyboard and cheatsheet to do projection mapping**
+
+---
+
 ## What now?
 
 Unfortunately this workshop is too short to show everything. Now you might be interested into the following topics.
 
-- Launching fullscreen with the -f flag
-- Launch on boot
+- Adding your own sources
 - Custom generative sources
+- Launch on boot
+- etc.
 
 ---
 
-## Ad Alert
+## Workshop
 
 There is a way. Join the Projection Mapping with the Raspberry Pi workshop on May 14 and 15 at the Fab Lab Berlin!
 
-More info https://fablab.berlin/en/23-courses
+More info **fablab.berlin/en/23-courses**
+
+![right](images/ofxpimapper-logo-illum.jpg)
 
 ---
 
 #Have fun with projection mapping!
+
+This presentaion is available at **github.com/kr15h/we-make-it-01**
+
+![left](images/click-festival-pi-mapper.jpg)
 
 
 [^1]: Image from projection mapping workshop by Krisjanis Rijnieks and Irina Spicaka during the School of Machines in Berlin, 2014
