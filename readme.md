@@ -1,5 +1,5 @@
-# We Make It 01
+# Projection Mapping with the Raspberry Pi
 
-Slides for the projection mapping with the Raspberry Pi workshop at Spektrum Berlin on 26 Mar 2016.
+Slides for the Projection Mapping with the Raspberry Pi workshop.
 
 Use the **Deckset** app to view the `slides.md` file.
