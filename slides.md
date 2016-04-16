@@ -1,4 +1,5 @@
 slidenumbers: true
+autoscale: true
 
 ![](images/click-festival-pi-mapper.jpg)
 
@@ -215,6 +216,62 @@ More info **fablab.berlin/en/23-courses**
 This presentaion is available at **github.com/kr15h/we-make-it-01**
 
 ![left](images/click-festival-pi-mapper.jpg)
+
+---
+
+# Launching on Boot
+
+There are two ways to do it.
+
+1. via **.bashrc** (or **.zshrc** if you use zsh)
+
+2. via **/etc/rc.local**
+
+For both create a **startup.sh** file.
+
+---
+
+## Contents of **startup.sh** File
+
+```
+#!/bin/bash
+if [ -z "$SSH_CONNECTION" ]; then
+    /home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f
+fi
+```
+
+The script makes sure that your scripts are not executed again when you log in via SSH. Make sure the system is allwed to execute it by running the following command.
+
+```
+chmod a+x startup.sh
+```
+
+---
+
+## Starting up via **.bashrc**
+
+1. Open **.bashrc** in a text editor
+
+2. Add path to **startup.sh** at the end of the file```
+/home/pi/startup.sh```
+
+3. Make sure that the **Console Autologin** option is set in the **raspi-config** **Boot Options**.
+
+4. Reboot the pi to test if it works
+
+---
+
+## Starting up via **rc.local**
+
+For this approach you do not need to set the **Console Autologin** option.
+
+1. Open **/etc/rc.local** in a text editor
+
+2. Add the following before the **exit 0** line```
+su - pi -c /home/pi/startup.sh &```
+
+This will launch the **startup.sh** script in behalf of the user **pi** before it has logged in.
+
 
 
 [^1]: Image from projection mapping workshop by Krisjanis Rijnieks and Irina Spicaka during the School of Machines in Berlin, 2014
