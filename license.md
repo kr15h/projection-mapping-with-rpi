@@ -1,4 +1,4 @@
-Projection Mapping with Raspberry Pi slides is distributed under the [MIT License](https://secure.wikimedia.org/wikipedia/en/wiki/Mit_license). This gives everyone the freedoms to use Projection Mapping with Raspberry Pi slides in any context: commercial or non-commercial, public or private, open or closed source.
+Projection Mapping with Raspberry Pi slides are distributed under the [MIT License](https://secure.wikimedia.org/wikipedia/en/wiki/Mit_license). This gives everyone the freedoms to use Projection Mapping with Raspberry Pi slides in any context: commercial or non-commercial, public or private, open or closed source.
 
 **Copyright (c) 2016, Krisjanis Rijnieks**
 
