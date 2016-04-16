@@ -201,6 +201,38 @@ Unfortunately this workshop is too short to show everything. Now you might be in
 
 ---
 
+# Adding Own Sources
+
+There are two ways to do it. 
+
+1. Directly copying files onto the SD card.
+
+2. Uploading via network by using a SFTP program.
+
+---
+
+## Copy Sources Directly
+
+If your computer runs Linux, you can add files to the SD card directly.
+
+1. Insert your SD card in the card reader
+
+2. Navigate to **/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/data/sources**
+
+3. Paste your own content there. Choose the **images/** or **videos/** directory depending on the type of content you have
+
+---
+
+## Upload via SFTP
+
+1. Use a SFTP client like **FileZilla**. Connect by using the IP address of the Raspberry Pi, the username **pi** and password **raspberry**. Use the port **22**.
+
+2. Navigate to **/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/data/sources**
+
+3. Drag and drop files onto the **videos/** or **images/** directory.
+
+---
+
 # Launching on Boot
 
 There are two ways to do it.
