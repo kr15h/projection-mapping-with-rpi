@@ -201,14 +201,6 @@ Unfortunately this workshop is too short to show everything. Now you might be in
 
 ---
 
-#Have fun with projection mapping!
-
-This presentaion is available at **github.com/kr15h/we-make-it-01**
-
-![left](images/click-festival-pi-mapper.jpg)
-
----
-
 # Launching on Boot
 
 There are two ways to do it.
