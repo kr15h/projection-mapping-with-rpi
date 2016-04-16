@@ -233,6 +233,54 @@ If your computer runs Linux, you can add files to the SD card directly.
 
 ---
 
+# Networking, IP Address and SSH
+
+One of the easiest ways for configuring the Raspberry Pi is via the SSH connection. 
+
+SSH translates to Secure Shell and it allows one to control a computer remotely via the command line interface (Terminal).
+
+```
+ssh pi@192.168.2.3
+```
+
+---
+
+## Wired Network Connection
+
+Ethernet cable is required for this, one end of it has to be connected to the Raspberry Pi, the other one to the ethernet port of a computer.
+
+Internet sharing has to be activated on the computer in order the Raspberry Pi to get an IP address automatically.
+
+It is also possible to connect the other end of the cable to an ethernet switch.
+
+---
+
+## Discovering the IP Address of the Pi
+
+In order to connect to the Raspberry Pi via SSH, we need to know its IP address.
+
+We are going to use **nmap** on Mac and a network scanner application on Windows.
+
+Run the following command to see what IP address has been assigned to the Raspberry Pi.
+
+```
+nmap -v -sn 192.168.2.1/24
+```
+
+---
+
+## SSH
+
+To SSH into the Raspberry Pi, use the **Terminal** application on Mac and Linux or **MobaxTerm** on Windows.
+
+Use the previously found IP address and enter password **raspberry** when prompted.
+
+```
+ssh pi@192.168.2.50
+```
+
+---
+
 # Launching on Boot
 
 There are two ways to do it.
