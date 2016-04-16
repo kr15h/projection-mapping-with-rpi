@@ -6,8 +6,8 @@ autoscale: true
 # Projection Mapping with the Raspberry Pi
 
 Krisjanis Rijnieks
-Spektrum Berlin
-26 March 2016
+Fab Lab Berlin
+16 April 2016
 
 <sub>Background image: Projection Mapping with the Raspberry Pi workshop during the Click Festival 2013 in Helsingor, Denmark. In collaboration with Irina Spicaka and Pixelache Helsinki.</sub>
 
@@ -198,16 +198,6 @@ Unfortunately this workshop is too short to show everything. Now you might be in
 - Custom generative sources
 - Launch on boot
 - etc.
-
----
-
-## Workshop
-
-There is a way. Join the Projection Mapping with the Raspberry Pi workshop on May 14 and 15 at the Fab Lab Berlin!
-
-More info **fablab.berlin/en/23-courses**
-
-![right](images/ofxpimapper-logo-illum.jpg)
 
 ---
 
