@@ -97,14 +97,15 @@ We are going to have a quick walktrhough on how to set up a simple projection ma
 
 ---
 
-## Today
+# [fit] Schedule Overview
 
-**The plan**
+**Day 1**
+1. Configuring the Pi
+2. Projection mapping
 
-1. Install Raspbian
-2. Configure Raspberry Pi
-3. Install openFrameworks and ofxPiMapper
-4. Have fun with projection mapping
+**Day 2**
+1. Questions and answers
+2. Advanced topics
 
 ![right](images/make-light-camp.jpg)
 
