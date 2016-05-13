@@ -9,6 +9,15 @@ footer: © Krisjanis Rijnieks 2016
 
 ---
 
+# [fit] Network Config
+
+Network is important. We are going to use a wireless network that has been specifically created for the workshop. Use the data below.
+
+SSID: *Projection Mapping*
+PASS: *raspberrypi*
+
+---
+
 ## Facts About Krisjanis Rijnieks
 
  - From Riga, Latvia
@@ -111,9 +120,7 @@ We are going to have a quick walktrhough on how to set up a simple projection ma
 
 ---
 
-## Step 1
-
-### Installing Raspbian
+# [fit] Installing Raspbian
 
 1. Get a Class 10 micro SD card. 8GB is fine.
 2. Download Raspbian from **raspberrypi.org/downloads**
