@@ -18,19 +18,21 @@ PASS: *raspberrypi*
 
 ---
 
-## Facts About Krisjanis Rijnieks
+# [fit] Facts About
+# [fit] Krisjanis Rijnieks
 
  - From Riga, Latvia
  - Studied New Media at the Helsinki Media Lab
- - Currently is a part of the Fab Lab Berlin family
- - Is developing ofxPiMapper and running projection mapping workshops
- - Likes Spektrum Berlin
+ - Currently is a part of Fab Lab Berlin
+ - Developer of ofxPiMapper, runs projection mapping workshops
+ - Interested in projects connected to creative coding, digital fabrication and projection mapping
 
 ![left filtered](images/krisjanis-rijnieks-photo-by-irina-spicaka.png)
 
 ---
 
-## More About Krisjanis Rijnieks
+# [fit] More About 
+# [fit] Krisjanis Rijnieks
 
 **Website**
 http://rijnieks.lv
