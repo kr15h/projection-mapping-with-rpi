@@ -4,13 +4,8 @@ footer: © Krisjanis Rijnieks 2016
 
 ![](images/click-festival-pi-mapper.jpg)
 
-# Projection Mapping with the Raspberry Pi
-
-Krisjanis Rijnieks
-Fab Lab Berlin
-16 April 2016
-
-<sub>Background image: Projection Mapping with the Raspberry Pi workshop during the Click Festival 2013 in Helsingor, Denmark. In collaboration with Irina Spicaka and Pixelache Helsinki.</sub>
+# [fit] Projection Mapping
+# [fit] with the Raspberry Pi
 
 ---
 
