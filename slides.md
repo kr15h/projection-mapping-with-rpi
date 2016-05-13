@@ -18,6 +18,18 @@ PASS: *raspberrypi*
 
 ---
 
+# [fit] Slides
+
+You can find this presentation on **GitHub**. It has been made with Markdown and **Deckset**. Follow the links below.
+
+**GitHub**
+https://github.com/kr15h/projection-mapping-with-rpi
+
+**Deckset**
+http://decksetapp.com
+
+---
+
 # [fit] Facts About
 # [fit] Krisjanis Rijnieks
 
