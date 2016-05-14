@@ -172,146 +172,28 @@ https://www.raspberrypi.org/documentation/installation/installing-images/README.
 
 ---
 
-## Step 2
+# [fit] Wired Network Connection
 
-### Starting up the first time
+There is a local network designed specifically for this workshop. 
 
-1. Login using username **pi** and password **raspberry**
-2. Launch config by typing ```
-sudo raspi-config```
-3. Expand filesystem
-4. Set memory split to at least 128MB
-5. Reboot
+1. WiFi network with SSID **Projection Mapping** and password **raspberrypi**. Connect to it with your computers.
+2. An ethernet switch where you should connect your Raspberry Pi
 
 ---
 
-## Step 3
+# [fit] Discovering the IP Address of the Pi
 
-### Download and install openFrameworks
+In order to connect to the Raspberry Pi via SSH, we need to know its IP address. Make sure that you are connected to the **Projection Mapping** WiFi network.
 
-Follow the instructions on **openframeworks.cc**.
-
-http://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
-
----
-
-## Step 4
-
-### Download and install ofxPiMapper
-
-- **Make sure that git is installed** ```
-sudo apt-get install git```
-- **Navigate to openFrameworks addons directory** ```
-cd /home/pi/openFrameworks/addons```
-- **Clone the ofxPiMapper git repository** ```
-git clone https://github.com/kr15h/ofxPiMapper.git```
-
----
-
-## Step 4
-
-### Download and install ofxPiMapper
-
-- **Clone dependencies** ```
-git clone https://github.com/jvcleave/ofxOMXPlayer.git && git clone https://github.com/bakercp/ofxIO.git```
-- **Go inside ofxPiMapper example directory** ```
-cd /home/pi/openFrameworks/addons/ofxPiMapper/example```
-- **Compile and run** ```
-make && make run```
-
----
-
-## Step 5
-
-### Usage
-
-- **Launch ofxPiMapper fullscreen by using the -f flag**```
-/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f```
-
-- **Use mouse, keyboard and cheatsheet to do projection mapping**
-
----
-
-## What now?
-
-Unfortunately this workshop is too short to show everything. Now you might be interested into the following topics.
-
-- Adding your own sources
-- Custom generative sources
-- Launch on boot
-- etc.
-
----
-
-# Adding Own Sources
-
-There are two ways to do it. 
-
-1. Directly copying files onto the SD card.
-
-2. Uploading via network by using a SFTP program.
-
----
-
-## Copy Sources Directly
-
-If your computer runs Linux, you can add files to the SD card directly.
-
-1. Insert your SD card in the card reader
-
-2. Navigate to **/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/data/sources**
-
-3. Paste your own content there. Choose the **images/** or **videos/** directory depending on the type of content you have
-
----
-
-## Upload via SFTP
-
-1. Use a SFTP client like **FileZilla**. Connect by using the IP address of the Raspberry Pi, the username **pi** and password **raspberry**. Use the port **22**.
-
-2. Navigate to **/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/data/sources**
-
-3. Drag and drop files onto the **videos/** or **images/** directory.
-
----
-
-# Networking, IP Address and SSH
-
-One of the easiest ways for configuring the Raspberry Pi is via the SSH connection. 
-
-SSH translates to Secure Shell and it allows one to control a computer remotely via the command line interface (Terminal).
+We are going to use **nmap** on Mac or Linux. Run the following command to see what IP address has been assigned to the Raspberry Pi.
 
 ```
-ssh pi@192.168.2.3
+nmap -v -sn 192.168.0.1/24
 ```
 
 ---
 
-## Wired Network Connection
-
-Ethernet cable is required for this, one end of it has to be connected to the Raspberry Pi, the other one to the ethernet port of a computer.
-
-Internet sharing has to be activated on the computer in order the Raspberry Pi to get an IP address automatically.
-
-It is also possible to connect the other end of the cable to an ethernet switch.
-
----
-
-## Discovering the IP Address of the Pi
-
-In order to connect to the Raspberry Pi via SSH, we need to know its IP address.
-
-We are going to use **nmap** on Mac and a network scanner application on Windows.
-
-Run the following command to see what IP address has been assigned to the Raspberry Pi.
-
-```
-nmap -v -sn 192.168.2.1/24
-```
-
----
-
-## SSH
+# [fit] SSH Login
 
 To SSH into the Raspberry Pi, use the **Terminal** application on Mac and Linux or **MobaxTerm** on Windows.
 
@@ -323,60 +205,31 @@ ssh pi@192.168.2.50
 
 ---
 
-# Launching on Boot
+# [fit] Launching on Boot
 
-There are two ways to do it.
+Use **Cron**. Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
 
-1. via **.bashrc** (or **.zshrc** if you use zsh)
-
-2. via **/etc/rc.local**
-
-For both create a **startup.sh** file.
-
----
-
-## Contents of **startup.sh** File
+Run the following command to edit `crontab` as `root`.
 
 ```
-#!/bin/bash
-if [ -z "$SSH_CONNECTION" ]; then
-    /home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f
-fi
-```
-
-The script makes sure that your scripts are not executed again when you log in via SSH. Make sure the system is allwed to execute it by running the following command.
-
-```
-chmod a+x startup.sh
+sudo crontab -e
 ```
 
 ---
 
-## Starting up via **.bashrc**
+# [fit] Editing Crontab
 
-1. Open **.bashrc** in a text editor
+You have to add the following line in order to launch ofxPiMapper on next boot.
 
-2. Add path to **startup.sh** at the end of the file```
-/home/pi/startup.sh```
+```
+@reboot /home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example
+```
 
-3. Make sure that the **Console Autologin** option is set in the **raspi-config** **Boot Options**.
+If you want to reboot once a day at midnight, add the following (the first five symbols denote: minute, hour, day of month, month, day of week; * means all)
 
-4. Reboot the pi to test if it works
-
----
-
-## Starting up via **rc.local**
-
-For this approach you do not need to set the **Console Autologin** option.
-
-1. Open **/etc/rc.local** in a text editor
-
-2. Add the following before the **exit 0** line```
-su - pi -c /home/pi/startup.sh &```
-
-This will launch the **startup.sh** script in behalf of the user **pi** before it has logged in.
-
-
+```
+0 0 * * * reboot
+```
 
 [^1]: Image from projection mapping workshop by Krisjanis Rijnieks and Irina Spicaka during the School of Machines in Berlin, 2014
 
