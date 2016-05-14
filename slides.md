@@ -154,6 +154,7 @@ We are going to have a quick walktrhough on how to set up a simple projection ma
 diskutil list
 diskutil unmountDisk /dev/diskN
 sudo dd if=/path/to/rpi/image.img of=/dev/rdiskN bs=2m
+diskutil eject /dev/diskN
 ```
 
 ## Warning!!!
@@ -195,7 +196,7 @@ nmap -v -sn 192.168.0.1/24
 
 # [fit] SSH Login
 
-To SSH into the Raspberry Pi, use the *Terminal* application on Mac and Linux or *Putty* on Windows.
+To SSH into the Raspberry Pi, use the *Terminal* application on Mac and Linux or *Putty* on Windows (http://putty.org)
 
 Use the previously found IP address and enter password *raspberry* when prompted.
 
@@ -253,6 +254,15 @@ If you want to reboot once a day at midnight, add the following (the first five 
 
 ```
 0 0 * * * reboot
+```
+---
+
+# [fit] Killing
+
+If you need to SSH into the Raspberry Pi after the autostart with crontab is set up to stop the software, you can do that. After logging in via SSH, run the following command to stop the ofxPiMapper process.
+
+```
+sudo killall example
 ```
 
 [^1]: Image from projection mapping workshop by Krisjanis Rijnieks and Irina Spicaka during the School of Machines in Berlin, 2014
