@@ -120,30 +120,54 @@ We are going to have a quick walktrhough on how to set up a simple projection ma
 
 ---
 
-# [fit] Schedule Overview
+# [fit] Workshop Overview
 
 **Day 1**
-1. Configuring the Pi
-2. Projection mapping
+1. Burning SD card
+2. Command line basics
+3. ofxPiMapper basics
+4. Using your own sources
 
 **Day 2**
-1. Questions and answers
-2. Advanced topics
+1. Quick recap Day 1
+2. openFrameworks addons
+3. openFrameworks intro
+4. Generative sources
 
 ![right](images/make-light-camp.jpg)
 
 ---
 
-# [fit] Installing Raspbian
+# [fit] Burning SD Card
+## Overview
 
 1. Get a Class 10 micro SD card. 8GB is fine.
-2. Download Raspbian from **raspberrypi.org/downloads**
-3. Burn the Raspbian disk image onto the SD card
+2. Get the ofxPiMapper disk image.
+3. Burn the disk image onto SD card.
+
+---
+
+# [fit] Burning SD Card
+## Mac
 
 ```
 diskutil list
 diskutil unmountDisk /dev/diskN
 sudo dd if=/path/to/rpi/image.img of=/dev/rdiskN bs=2m
+```
+
+## Warning!!!
+Be very careful with the `dd` command. Make sure TWICE that you have found the right `/dev/rdiskN`.
+
+---
+
+# [fit] Burning SD Card
+## Other Platforms
+
+There are guides on burning disk images onto SD cards on the official Raspberry Pi website. Use the URL below.
+
+```
+https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 ```
 
 ---
