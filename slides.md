@@ -195,9 +195,9 @@ nmap -v -sn 192.168.0.1/24
 
 # [fit] SSH Login
 
-To SSH into the Raspberry Pi, use the **Terminal** application on Mac and Linux or **MobaxTerm** on Windows.
+To SSH into the Raspberry Pi, use the *Terminal* application on Mac and Linux or *Putty* on Windows.
 
-Use the previously found IP address and enter password **raspberry** when prompted.
+Use the previously found IP address and enter password *raspberry* when prompted.
 
 ```
 ssh pi@192.168.2.50
@@ -205,9 +205,32 @@ ssh pi@192.168.2.50
 
 ---
 
-# [fit] Launching on Boot
+# [fit] Launching ofxPiMapper
 
-Use **Cron**. Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
+The system is configured in a way that ofxPiMapper is not launched automatically. One has to do it. Use the following command once logged in.
+
+```
+/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f
+```
+
+The first part of the command is the path to the ofxPiMapper executable. The `-f` flag is for launching it fullscreen.
+
+---
+
+# [fit] Command Line Basics
+
+There are a lot of useful guides out there on the Internet. Check out the following links.
+
+- http://kr15h.github.io/rpi-console-intro/index.html
+- http://linuxcommand.org/lc3\_learning\_the\_shell.php
+- https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101
+
+---
+
+# [fit] Launching on Boot
+## Introducing Crontab
+
+Use *Cron*. Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
 
 Run the following command to edit `crontab` as `root`.
 
@@ -217,7 +240,8 @@ sudo crontab -e
 
 ---
 
-# [fit] Editing Crontab
+# [fit] Launching on Boot
+## Editing Crontab
 
 You have to add the following line in order to launch ofxPiMapper on next boot.
 
