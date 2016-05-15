@@ -182,7 +182,25 @@ There is a local network designed specifically for this workshop.
 
 ---
 
-# [fit] Discovering the IP Address of the Pi
+# [fit] Discovering the IP Address
+## The Keyboard and Screen Way
+
+If you have a screen and a keyboard connected to your Raspberry Pi, you can log into it by using the username *pi* and password *raspberry*
+
+Once that is done use the *ifconfig* command to see the IP address. You should be looking for the folliwing lines.
+
+```
+ifconfig
+eth0      Link encap:Ethernet  HWaddr b8:27:eb:3a:b9:a6
+          inet addr:192.168.0.102  Bcast:192.168.0.255  Mask:255.255.255.0
+```
+
+In this case the interesting part is *addr:192.168.0.102* and thus the IP address is *192.168.0.102*.
+
+---
+
+# [fit] Discovering the IP Address
+## The nmap Way
 
 In order to connect to the Raspberry Pi via SSH, we need to know its IP address. Make sure that you are connected to the **Projection Mapping** WiFi network.
 
@@ -190,6 +208,23 @@ We are going to use **nmap** on Mac or Linux. Run the following command to see w
 
 ```
 nmap -v -sn 192.168.0.1/24
+```
+
+---
+
+# [fit] Installing nmap with Homebrew
+## Mac
+
+On Mac systems you should install a package manager called *Homebrew*. Follow the link below.
+
+```
+http://brew.sh/
+```
+
+Once installed, you can install missing command line packages from the *Terminal* by using the *brew install* command. To install *nmap* use the following.
+
+```
+brew install nmap
 ```
 
 ---
