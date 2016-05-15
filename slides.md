@@ -381,6 +381,41 @@ Then you will have to recompile the program by using the GNU *make* program.
 make
 ```
 
+---
+
+# [fit] Installing from Scratch
+
+Once you have the OS (like Raspbian) installed on your SD card, the next step is to install *openFrameworks*. To do that, follow the guide available on the official openFrameworks website.
+
+```
+http://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
+```
+
+---
+
+# [fit] Installing ofxPiMapper From Scratch
+
+Once installing openFrameworks is done, navigate to the */home/pi/openFrameworks/addons* folder and *git clone* the ofxPiMapper GitHub repository.
+
+```
+cd /home/pi/openFrameworks/addons
+git clone https://github.com/kr15h/ofxPiMapper.git
+```
+
+Also make sure that dependencies are there.
+
+```
+git clone https://github.com/jvcleave/ofxOMXPlayer.git
+git clone https://github.com/bakercp/ofxIO.git
+```
+
+Next you should compile the ofxPiMapper example. 
+
+```
+cd /home/pi/openFrameworks/addons/ofxPiMapper/example
+make
+```
+
 [^1]: Image from projection mapping workshop by Krisjanis Rijnieks and Irina Spicaka during the School of Machines in Berlin, 2014
 
 [^2]: Image source: Google Cultural Institute
