@@ -308,11 +308,12 @@ You have to add the following line in order to launch ofxPiMapper on next boot.
 @reboot /home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example
 ```
 
-If you want to reboot once a day at midnight, add the following (the first five symbols denote: minute, hour, day of month, month, day of week; * means all)
+If you want to reboot once a day at midnight, add the following (the first five symbols denote: *minute*, *hour*, *day of month*, *month*, *day of week*; *\** means all)
 
 ```
 0 0 * * * reboot
 ```
+
 ---
 
 # [fit] Killing
@@ -321,6 +322,28 @@ If you need to SSH into the Raspberry Pi after the autostart with crontab is set
 
 ```
 sudo killall example
+```
+
+---
+
+# [fit] Keeping ofxPiMapper up to date
+
+You might want to update ofxPiMapper to be able to use the latest features. To do that, navigate to the *ofxPiMapper* directory first.
+
+```
+cd /home/pi/openFrameworks/addons/ofxPiMapper
+```
+
+Use git to *pull in* the latest changes. Make sure that you are connected to the internet.
+
+```
+git pull origin master
+``` 
+
+Then you will have to recompile the program by using the GNU *make* program.
+
+```
+make
 ```
 
 [^1]: Image from projection mapping workshop by Krisjanis Rijnieks and Irina Spicaka during the School of Machines in Berlin, 2014
