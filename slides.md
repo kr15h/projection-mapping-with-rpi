@@ -246,6 +246,36 @@ You can not use mouse in *nano*, navigation is possible with the arrow keys *(â†
 
 ---
 
+# [fit] Keeping System up to Date
+
+Once in a while it is a good idea to update the system. To do that use the following commands.
+
+```
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+The *update* and *upgrade* commands will take a while. That's normal.
+
+---
+
+# [fit] Powering up and down
+
+After an update or changes in configuration, one might want to reboot the system. Use the following command to do so.
+
+```
+sudo reboot
+```
+
+When changes have to be made to the SD card or the Raspberry Pi has to be shut down for another reason, use the command below.
+
+```
+sudo halt
+```
+
+---
+
 # [fit] External Command Line Resources
 
 There are a lot of useful guides out there on the Internet. Check out the following links.
