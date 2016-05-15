@@ -206,18 +206,6 @@ ssh pi@192.168.2.50
 
 ---
 
-# [fit] Launching ofxPiMapper
-
-The system is configured in a way that ofxPiMapper is not launched automatically. One has to do it. Use the following command once logged in.
-
-```
-/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f
-```
-
-The first part of the command is the path to the ofxPiMapper executable. The `-f` flag is for launching it fullscreen. Press *ctrl + c* to exit.
-
----
-
 # [fit] Command Line 101
 
 ```
@@ -283,6 +271,18 @@ There are a lot of useful guides out there on the Internet. Check out the follow
 - http://kr15h.github.io/rpi-console-intro/index.html
 - http://linuxcommand.org/lc3\_learning\_the\_shell.php
 - https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101
+
+---
+
+# [fit] Launching ofxPiMapper
+
+The system is configured in a way that ofxPiMapper is not launched automatically. One has to do it. Use the following command once logged in.
+
+```
+/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f
+```
+
+The first part of the command is the path to the ofxPiMapper executable. The `-f` flag is for launching it fullscreen. Press *ctrl + c* to exit.
 
 ---
 
