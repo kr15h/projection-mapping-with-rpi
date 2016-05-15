@@ -383,7 +383,7 @@ make
 
 ---
 
-# [fit] Installing from Scratch
+# [fit] Installing openFrameworks
 
 Once you have the OS (like Raspbian) installed on your SD card, the next step is to install *openFrameworks*. To do that, follow the guide available on the official openFrameworks website.
 
@@ -393,7 +393,7 @@ http://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
 
 ---
 
-# [fit] Installing ofxPiMapper From Scratch
+# [fit] Installing ofxPiMapper
 
 Once installing openFrameworks is done, navigate to the */home/pi/openFrameworks/addons* folder and *git clone* the ofxPiMapper GitHub repository.
 
