@@ -333,6 +333,32 @@ The first part of the command is the path to the ofxPiMapper executable. The `-f
 
 ---
 
+# [fit] Uploading Own Sources
+## The SD Card Way
+
+You can copy small files directly onto the SD card in the *ofxpimapper/sources* directory. Place the video files in the *videos* directory and image files in the *images* directory.
+
+---
+
+# [fit] Uploading Own Sources
+## The SFTP Way
+
+As you can connect to the Raspberry Pi via SSH, you can also use the SSH File Transfer Protocol (SFTP) to upload files via network. 
+
+Use *FileZilla* or other SFTP software to do that. You can download FileZilla from the link below.
+
+```
+https://filezilla-project.org/
+```
+
+Use the same IP address as for the SSH part, the username *pi* and password *raspberry*. Use *port 22*. You can find the sources directory under the path below.
+
+```
+/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/data/sources
+```
+
+---
+
 # [fit] Launching on Boot
 ## Introducing Crontab
 
