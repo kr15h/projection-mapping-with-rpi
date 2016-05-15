@@ -214,7 +214,7 @@ The system is configured in a way that ofxPiMapper is not launched automatically
 /home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example -f
 ```
 
-The first part of the command is the path to the ofxPiMapper executable. The `-f` flag is for launching it fullscreen.
+The first part of the command is the path to the ofxPiMapper executable. The `-f` flag is for launching it fullscreen. Press *ctrl + c* to exit.
 
 ---
 
