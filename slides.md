@@ -196,7 +196,7 @@ nmap -v -sn 192.168.0.1/24
 
 # [fit] SSH Login
 
-To SSH into the Raspberry Pi, use the *Terminal* application on Mac and Linux or *Putty* on Windows (http://putty.org)
+To SSH into the Raspberry Pi, use the *Terminal* application on Mac and Linux or *Putty* on Windows (http://putty.org). Use the username *pi* and password *raspberry* with it.
 
 Use the previously found IP address and enter password *raspberry* when prompted.
 
