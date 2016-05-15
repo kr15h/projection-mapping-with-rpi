@@ -241,6 +241,18 @@ ssh pi@192.168.2.50
 
 ---
 
+# [fit] Expanding the Filesystem
+
+When you log in the first time, it is recommended to expand the filesystem to occupy the full size of the SD card. Open the Raspberry Pi configuration tool.
+
+```
+sudo raspi-config
+```
+
+Select the option *1. Expand Filesystem*. You should *reboot* after completing this step.
+
+---
+
 # [fit] Command Line 101
 
 ```
