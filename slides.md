@@ -246,7 +246,7 @@ You can not use mouse in *nano*, navigation is possible with the arrow keys *(â†
 
 ---
 
-# [fit] Command Line Basics
+# [fit] External Command Line Resources
 
 There are a lot of useful guides out there on the Internet. Check out the following links.
 
