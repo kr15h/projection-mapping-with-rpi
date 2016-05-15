@@ -218,6 +218,22 @@ The first part of the command is the path to the ofxPiMapper executable. The `-f
 
 ---
 
+# [fit] Command Line 101
+
+```
+pwd             Print working directory
+cd /my/dir      Change directory to /my/dir
+cd ..           Change directory one level up
+ls              List directory
+ls -al          List directory with hidden files as a list
+mkdir /my/dir   Make directory /my/dir
+touch file.txt  Create empty file.txt
+cat file.txt    Show file contents (best for small files)
+less file.txt   Show file contents (good for longer text)   
+```
+
+---
+
 # [fit] Command Line Basics
 
 There are a lot of useful guides out there on the Internet. Check out the following links.
