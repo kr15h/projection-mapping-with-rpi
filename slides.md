@@ -234,6 +234,18 @@ less file.txt   Show file contents (good for longer text)
 
 ---
 
+# [fit] Editing Text Files With Nano
+
+The simplest command line text editor is `nano`. To open a file in nano, use the following command.
+
+```
+nano /path/to/your/file.txt
+```
+
+You can not use mouse in *nano*, navigation is possible with the arrow keys *(← ↑ → ↓)* on your keyboard. To close the file, press *ctrl + x*. Nano will prompt you whether you want to save changes. Press *y* if you do, you will have to press *enter* additionally to confirm the file name.
+
+---
+
 # [fit] Command Line Basics
 
 There are a lot of useful guides out there on the Internet. Check out the following links.
