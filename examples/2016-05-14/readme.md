@@ -3,7 +3,7 @@
 
 Here you can find ofxPiMapper and its addon related version information. 
 
-During the workshop ofxPiMapper was at commit `6a6702e4f99ee77430560706a96eaf3715cf27d8`. If the examles do not compile, you might want to check out the commits used during the workshop.
+During the workshop ofxPiMapper was at commit `128271b0cf8fe2eb93b30855c109347f6c417e41`. If the examles do not compile, you might want to check out the commits used during the workshop.
 
 1. Use openFrameworks version 0.9.3 if in trouble.
 
