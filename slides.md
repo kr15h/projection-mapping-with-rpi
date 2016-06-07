@@ -157,7 +157,7 @@ sudo dd if=/path/to/rpi/image.img of=/dev/rdiskN bs=2m
 diskutil eject /dev/diskN
 ```
 
-The `dd` tool does not provide any feedback in a form of a progress bar or other. Just wait. It should output lines similar to the following.
+Press `ctrl + t` to monitor the progress. Then wait. It should output lines similar to the following.
 
 ```
 3700+0 records in
