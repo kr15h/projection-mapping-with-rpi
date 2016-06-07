@@ -13,8 +13,8 @@ footer: © Krisjanis Rijnieks 2016
 
 Network is important. We are going to use a wireless network that has been specifically created for the workshop. Use the data below.
 
-SSID: *Projection Mapping*
-PASS: *raspberrypi*
+SSID: *pi*
+PASS: *raspberry*
 
 ---
 
@@ -157,8 +157,15 @@ sudo dd if=/path/to/rpi/image.img of=/dev/rdiskN bs=2m
 diskutil eject /dev/diskN
 ```
 
-## Warning!!!
-Be very careful with the `dd` command. Make sure TWICE that you have found the right `/dev/rdiskN`.
+The `dd` tool does not provide any feedback in a form of a progress bar or other. Just wait. It should output lines similar to the following.
+
+```
+3700+0 records in
+3700+0 records out
+3879731200 bytes transferred in 206.446788 secs (18792887 bytes/sec)
+```
+
+**Warning**: Be very careful with the `dd` command. Make sure TWICE that you have found the right `/dev/rdiskN`.
 
 ---
 
@@ -177,7 +184,7 @@ https://www.raspberrypi.org/documentation/installation/installing-images/README.
 
 There is a local network designed specifically for this workshop. 
 
-1. WiFi network with SSID **Projection Mapping** and password **raspberrypi**. Connect to it with your computers.
+1. WiFi network with SSID **pi** and password **raspberry**. Connect to it with your computers.
 2. An ethernet switch where you should connect your Raspberry Pi
 
 ---
@@ -202,7 +209,7 @@ In this case the interesting part is *addr:192.168.0.102* and thus the IP addres
 # [fit] Discovering the IP Address
 ## The nmap Way
 
-In order to connect to the Raspberry Pi via SSH, we need to know its IP address. Make sure that you are connected to the **Projection Mapping** WiFi network.
+In order to connect to the Raspberry Pi via SSH, we need to know its IP address. Make sure that you are connected to the **pi** WiFi network.
 
 We are going to use **nmap** on Mac or Linux. Run the following command to see what IP address has been assigned to the Raspberry Pi.
 
@@ -364,10 +371,10 @@ Use the same IP address as for the SSH part, the username *pi* and password *ras
 
 Use *Cron*. Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
 
-Run the following command to edit `crontab` as `root`.
+Run the following command to edit `crontab`.
 
 ```
-sudo crontab -e
+crontab -e
 ```
 
 ---
