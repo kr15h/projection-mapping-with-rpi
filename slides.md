@@ -38,21 +38,31 @@ Projects range in complexity and usually include a combination of the following.
 
 ---
 
+The Portal Project, December 2016
+
 ![fit loop autoplay](videos/portal.mp4)
 
 ---
+
+Maker in Residence, December 2016
 
 ![fit loop autoplay](videos/mir.mp4)
 
 ---
 
+Staro Riga Festival, November 2016
+
 ![fit loop autoplay](videos/staro.mp4)
 
 ---
 
+SUDO, Summer 2016
+
 ![fit loop autoplay](videos/sudo.mp4)
 
 ---
+
+Latvian National Museum of Art, May 2016
 
 ![fit loop autoplay](videos/lnmm.mp4)
 
