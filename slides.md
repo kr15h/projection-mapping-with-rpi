@@ -38,6 +38,10 @@ Projects range in complexity and usually include a combination of the following.
 
 ---
 
+![fit loop autoplay](videos/mir.mp4)
+
+---
+
 ![fit loop autoplay](videos/staro.mp4)
 
 ---
