@@ -1,6 +1,6 @@
 slidenumbers: true
 autoscale: true
-footer: © Krisjanis Rijnieks 2016
+footer: © Krisjanis Rijnieks 2017
 
 ![](images/click-festival-pi-mapper.jpg)
 
