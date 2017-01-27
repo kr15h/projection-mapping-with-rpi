@@ -4,8 +4,8 @@ footer: © Krisjanis Rijnieks 2016
 
 ![](images/click-festival-pi-mapper.jpg)
 
-# [fit] Projection Mapping
-# [fit] with Raspberry Pi_
+# [fit] Mapping with the Pi
+## [fit] Projection Mapping with the Raspberry Pi
 
 ---
 
