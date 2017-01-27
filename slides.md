@@ -299,21 +299,9 @@ killall example
 
 # [fit] Keeping ofxPiMapper up to date
 
-You might want to update ofxPiMapper to be able to use the latest features. To do that, navigate to the *ofxPiMapper* directory first.
-
 ```
 cd /home/pi/openFrameworks/addons/ofxPiMapper
-```
-
-Use git to *pull in* the latest changes. Make sure that you are connected to the internet.
-
-```
 git pull origin master
-``` 
-
-Then you will have to recompile the program by using the GNU *make* program.
-
-```
 make
 ```
 
