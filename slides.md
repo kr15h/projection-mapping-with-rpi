@@ -103,7 +103,7 @@ We are going to use open source projection mapping addon for openFrameworks.
 
 Please use the following link to download the image file.
 
-**http://ej.uz/ofxpimapper20161125a**
+**http://ej.uz/ofxpimapper20170127a**
 
 ---
 
