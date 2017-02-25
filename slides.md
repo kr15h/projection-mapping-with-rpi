@@ -259,6 +259,16 @@ Use the following credentials to establish connection.
 
 ---
 
+# Killing the Example App
+
+In order to stop the running ofxPiMapper example application, run this command.
+
+```
+sudo killall example
+```
+
+---
+
 # [fit] Command Line 101
 
 ```
@@ -271,6 +281,11 @@ mkdir /my/dir   Make directory /my/dir
 touch file.txt  Create empty file.txt
 cat file.txt    Show file contents (best for small files)
 less file.txt   Show file contents (good for longer text)   
+```
+
+```
+echo "New line" >> file.txt
+echo "Overwrite" > file.txt
 ```
 
 ---
@@ -317,36 +332,14 @@ After an update or changes in configuration, one might want to reboot the system
 
 ```
 sudo reboot
+sudo shutdown -r now
 ```
 
 When changes have to be made to the SD card or the Raspberry Pi has to be shut down for another reason, use the command below.
 
 ```
 sudo halt
-```
-
----
-
-# [fit] Uploading Own Sources
-## The SD Card Way
-
-You can copy small files directly onto the SD card in the *ofxpimapper/sources* directory. Place the video files in the *videos* directory and image files in the *images* directory.
-
----
-
-# [fit] Uploading Own Sources
-## The SFTP Way
-
-Use FileZilla.
-
-```
-https://filezilla-project.org/
-```
-
-Use the same IP address as for the SSH part, the username *pi* and password *raspberry*. Use *port 22*. You can find the sources directory under the path below.
-
-```
-/home/pi/openFrameworks/addons/ofxPiMapper/example/bin/data/sources
+sudo shutdown -h now
 ```
 
 ---
@@ -381,23 +374,29 @@ If you want to reboot once a day at midnight, add the following (the first five 
 
 ---
 
-# [fit] Killing
-
-If you need to SSH into the Raspberry Pi after the autostart with crontab is set up to stop the software, you can do that. After logging in via SSH, run the following command to stop the ofxPiMapper process.
+# [fit] Keeping ofxPiMapper up to date
 
 ```
-killall example
+cd /home/pi/openFrameworks/addons/ofxPiMapper/example
+git pull origin master
+make
 ```
 
 ---
 
-# [fit] Keeping ofxPiMapper up to date
+# Uploading Basic Examples
 
-```
-cd /home/pi/openFrameworks/addons/ofxPiMapper
-git pull origin master
-make
-```
+1. Connect to Pi with **FileZilla** or **WinSCP**
+2. /home/pi/openFrameworks/apps/myApps
+3. Drop **yourApp** folder there
+
+---
+
+# Compiling Basic Examples
+
+1. Use **Terminal** or **PuTTY** to connect to your Pi
+2. cd /home/pi/openFrameworks/apps/myApps/**yourApp**
+3. type **make** and when it completes **make run**
 
 ---
 
