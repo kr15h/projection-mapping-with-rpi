@@ -139,8 +139,8 @@ You can find an ever updating version of keyboard shortcuts on the ofxPiMapper G
 
 Find some image and / or video sources that you want to use. 
 
-Images: jpg, jpeg, png (2000 x 2000px max)
-Videos: mp4 (H.264 encoding, 1280 x 720px)
+**Images**: jpg, jpeg, png (2000 x 2000px max)
+**Videos**: mp4 (H.264 encoding, 1280 x 720px)
 
 ---
 
