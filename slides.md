@@ -146,6 +146,8 @@ Videos: mp4 (H.264 encoding, 1280 x 720px)
 
 # Configure WiFi
 
+Use the following command on the Raspberry Pi.
+
 ```
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
