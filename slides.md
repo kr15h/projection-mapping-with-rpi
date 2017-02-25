@@ -107,9 +107,11 @@ We are going to use open source projection mapping addon for openFrameworks.
 
 # Download
 
-Please use the following link to download the image file.
+Go to the following web address.
 
-**http://ej.uz/ofxpimapper20170127a**
+**ofxpimapper.com**
+
+Click on **Download latest**.
 
 ---
 
