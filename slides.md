@@ -152,35 +152,110 @@ Use the following command on the Raspberry Pi.
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Replace with your network credentials. Hit CTRL+X and Y and ENTER to save and exit.
-
----
-
-# Encoding Tools
-
-- ffmpeg
-- HandBrake
-- Adobe Media Encoder
-- MPEG Streamclip
-
----
-
-# ffmpeg Commands
+Replace with your network credentials. Hit CTRL+X and Y and ENTER to save and exit. Use the following to reboot.
 
 ```
-ffmpeg -i source.mov -vf scale=w=800:h=450 destination.mp4
+sudo reboot
 ```
 
 ---
 
-# SSH
+# Getting IP Address
+
+Use the following command to see the IP address of the Raspberry Pi wireless network adapter.
 
 ```
-ssh pi@192.168.0.40
+ifconfig
 ```
+
+Look for **wlan0** and **inet addr**. It should look like **192.168.0.3** Note it down somewhere.
+
+---
+
+# Getting a SFTP Client
+
+Raspberry Pi uses the Secure SHell protocol and that works with file transfers as well. Get one of the following.
+
+- FileZilla
+- WinSCP (Windows only)
+
+---
+
+# Connecting to the Pi
+
+Use the **inet addr** from before
 
 Username: pi
 Password: raspberry
+
+---
+
+# Uploading
+
+```
+/home/pi
+/openFrameworks/addons
+/ofxPiMapper/example/bin/data/sources
+```
+
+Put images and videos in the respective folders. Reboot.
+
+```
+sudo reboot
+```
+
+---
+
+# Video Encoding Tools
+
+Use HandBrake to encode your videos. You can download it from the following website.
+
+**handbrake.fr**
+
+Use the **Fast 720p30** preset for encoding.
+
+---
+
+# FFMPEG Commands
+
+In case you decide to use FFMPEG, here is a basic command you can use.
+
+```
+ffmpeg -i source.mov -vf scale=w=1280:h=720 destination.mp4
+```
+
+---
+
+# Secure SHell
+
+SSH is a secure network protocol for controlling another computer through a network.
+
+**Mac and Linux**: use Terminal
+**Windows**: Get PuTTY
+
+**chiark.greenend.org.uk/~sgtatham/putty**
+
+---
+
+# Connecting via Terminal
+
+Use the following command.
+
+```
+ssh pi@192.168.0.3
+```
+
+Replace the IP address with the one your Pi has. Enter password (**raspberry**) when asked to do so.
+
+---
+
+# Connecting via PuTTY
+
+Use the following credentials to establish connection.
+
+**Hostname**: 192.168.0.3 (replace this)
+**Username**: pi
+**Password**: raspberry
 
 ---
 
