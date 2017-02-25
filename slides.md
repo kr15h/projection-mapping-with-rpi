@@ -137,11 +137,17 @@ You can find an ever updating version of keyboard shortcuts on the ofxPiMapper G
 
 # Own Sources
 
-Use a USB flash drive and put some of these there.
+Find some image and video sources that you want to use.
 
-- jpg
-- png
-- mp4
+---
+
+# Configure WiFi
+
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+Replace with your network credentials. Hit CTRL+X and Y and ENTER to save and exit.
 
 ---
 
