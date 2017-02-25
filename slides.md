@@ -38,6 +38,12 @@ Projects range in complexity and usually include a combination of the following.
 
 ---
 
+The Thirsty Trees, February 2017
+
+![fit loop autoplay](videos/trees.mp4)
+
+---
+
 The Portal Project, December 2016
 
 ![fit loop autoplay](videos/portal.mp4)
