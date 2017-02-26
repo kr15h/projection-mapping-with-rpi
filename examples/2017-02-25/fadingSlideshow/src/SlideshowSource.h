@@ -8,6 +8,7 @@ class SlideshowSource :
 		void setup();
 		void update();
 		void draw();
+		void relistDir();
 	
 		ofDirectory imageDir;
 		
@@ -19,6 +20,10 @@ class SlideshowSource :
 		int alpha;
 		
 		float timer;
+		float dirTimer;
 		
 		bool fading;
+		bool hasChanged();
+		
+		map<string, unsigned int> currFiles;
 };
