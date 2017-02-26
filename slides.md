@@ -400,7 +400,7 @@ make
 
 ---
 
-# Backing up
+# Backing up on Mac
 
 Make sure that you do not expand the filesystem of the disk image provided during the workshop.
 
@@ -409,6 +409,18 @@ diskutil list
 diskutil unmountDisk /dev/diskN
 sudo dd if=/dev/rdiskN of=./backup.img bs=1m count=3700
 ```
+
+---
+
+# Backink up on Windows
+
+Use **Win32DiskImager** to back up your SD card.
+
+1. Select SD card drive from the list
+2. Click on the folder icon
+3. Select where to save the **_.img** on disk
+4. Click **Open**
+5. Click **Read**
 
 ---
 
