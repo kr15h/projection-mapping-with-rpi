@@ -324,16 +324,16 @@ The *update* and *upgrade* commands will take a while. That's normal.
 
 ---
 
-# [fit] Powering up and down
+# Powering up and down
 
-After an update or changes in configuration, one might want to reboot the system. Use the following command to do so.
+Use one of the following to **reboot**.
 
 ```
 sudo reboot
 sudo shutdown -r now
 ```
 
-When changes have to be made to the SD card or the Raspberry Pi has to be shut down for another reason, use the command below.
+Use one of the following to **shutdown**.
 
 ```
 sudo halt
