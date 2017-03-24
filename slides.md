@@ -157,6 +157,18 @@ Use the **Fast 1080p30** if using single video.
 
 ---
 
+# Encoding with FFmpeg
+
+In case you decide to use **FFmpeg** (cross-platform solution to record, convert and stream audio and video), here is a basic command you can use.
+
+```
+ffmpeg -i source.mov -vf scale=w=1280:h=720 destination.mp4
+```
+
+Website: **ffmpeg.org**
+
+---
+
 # Configure WiFi
 
 Use the following command on the Raspberry Pi.
@@ -215,16 +227,6 @@ Put images and videos in the respective folders. Reboot.
 
 ```
 sudo reboot
-```
-
----
-
-# FFMPEG Commands
-
-In case you decide to use FFMPEG, here is a basic command you can use.
-
-```
-ffmpeg -i source.mov -vf scale=w=1280:h=720 destination.mp4
 ```
 
 ---
