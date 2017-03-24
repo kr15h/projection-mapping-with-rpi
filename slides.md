@@ -236,9 +236,7 @@ sudo reboot
 SSH is a secure network protocol for controlling another computer through a network.
 
 **Mac and Linux**: use Terminal
-**Windows**: Get PuTTY
-
-**chiark.greenend.org.uk/~sgtatham/putty**
+**Windows**: Get PuTTY (putty.org)
 
 ---
 
