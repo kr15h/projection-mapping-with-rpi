@@ -187,7 +187,7 @@ Look for **wlan0** and **inet addr**. It should look like **192.168.0.3** Note i
 
 # Getting a SFTP Client
 
-Raspberry Pi uses the Secure SHell protocol and that works with file transfers as well. Get one of the following.
+Raspberry Pi uses the **S**ecure **SH**ell protocol and that works with file transfers as well. Get one of the following.
 
 - FileZilla
 - WinSCP (Windows only)
