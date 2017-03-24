@@ -310,9 +310,9 @@ Use **CTRL + X** to exit. Nano will ask if you sure. Hit **Y** to confirm and **
 
 ---
 
-# [fit] Keeping System up to Date
+# Keeping System up to Date
 
-Once in a while it is a good idea to update the system. To do that use the following commands.
+Use the following commands to update your Raspberry Pi.
 
 ```
 sudo apt-get clean
