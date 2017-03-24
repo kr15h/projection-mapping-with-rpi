@@ -129,6 +129,8 @@ You can find an ever updating version of keyboard shortcuts on the ofxPiMapper G
 
 **https://github.com/kr15h/ofxPiMapper**
 
+Make sure you have selected the **stable** branch.
+
 ---
 
 # Experiment
