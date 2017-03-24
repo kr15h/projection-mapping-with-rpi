@@ -198,8 +198,8 @@ Raspberry Pi uses the **S**ecure **SH**ell protocol and that works with file tra
 
 Use the **inet addr** from before
 
-Username: pi
-Password: raspberry
+Username: **pi**
+Password: **raspberry**
 
 ---
 
