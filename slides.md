@@ -272,46 +272,41 @@ sudo killall example
 
 ---
 
-# [fit] Command Line 101
+# Command Line 101
 
 ```
-pwd             Print working directory
-cd /my/dir      Change directory to /my/dir
-cd ..           Change directory one level up
-ls              List directory
-ls -al          List directory with hidden files as a list
-mkdir /my/dir   Make directory /my/dir
-touch file.txt  Create empty file.txt
-cat file.txt    Show file contents (best for small files)
-less file.txt   Show file contents (good for longer text)   
-```
-
-```
-echo "New line" >> file.txt
-echo "Overwrite" > file.txt
+pwd 	    Print working directory
+ls 		    List directory
+ls -l 		List with options
+ls -al 		List including hidden files with options
+cd /my/dir  Change directory to /my/dir
+cd ..       Change directory to one level up
 ```
 
 ---
 
-# [fit] External Command Line Resources
+# Create Text File
 
-There are a lot of useful guides out there on the Internet. Check out the following links.
+```
+# Create empty file.txt
+touch file.txt  
 
-- http://kr15h.github.io/rpi-console-intro/index.html
-- http://linuxcommand.org/lc3\_learning\_the\_shell.php
-- https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101
+# To add or replace content.
+echo "Add new line" >> file.txt
+echo "Overwrite everything" > file.txt
+```
 
 ---
 
-# [fit] Editing Text Files With Nano
-
-The simplest command line text editor is `nano`. To open a file in nano, use the following command.
+# Read Text File
 
 ```
-nano /path/to/your/file.txt
+cat file.txt    Read short file
+less file.txt   Read big file (hit Q to exit)
+nano file.txt   Edit file with nano
 ```
 
-You can not use mouse in *nano*, navigation is possible with the arrow keys *(← ↑ → ↓)* on your keyboard. To close the file, press *ctrl + x*. Nano will prompt you whether you want to save changes. Press *y* if you do, you will have to press *enter* additionally to confirm the file name.
+Use **CTRL + X** to exit. Nano will ask if you sure. Hit **Y** to confirm and **ENTER** to write to the file.
 
 ---
 
