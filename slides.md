@@ -153,6 +153,7 @@ Use HandBrake to encode your videos. You can download it from the following webs
 **handbrake.fr**
 
 Use the **Fast 720p30** preset for encoding.
+Use the **Fast 1080p30** if using single video.
 
 ---
 
