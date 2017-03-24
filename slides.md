@@ -342,10 +342,9 @@ sudo shutdown -h now
 
 ---
 
-# [fit] Launching on Boot
-## Introducing Crontab
+# Launching on Boot with Cron
 
-Use *Cron*. Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
+Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
 
 Run the following command to edit `crontab`.
 
