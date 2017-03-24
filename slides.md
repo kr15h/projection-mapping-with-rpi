@@ -146,6 +146,16 @@ Find some image and / or video sources that you want to use.
 
 ---
 
+# Video Encoding Tools
+
+Use HandBrake to encode your videos. You can download it from the following website.
+
+**handbrake.fr**
+
+Use the **Fast 720p30** preset for encoding.
+
+---
+
 # Configure WiFi
 
 Use the following command on the Raspberry Pi.
@@ -205,16 +215,6 @@ Put images and videos in the respective folders. Reboot.
 ```
 sudo reboot
 ```
-
----
-
-# Video Encoding Tools
-
-Use HandBrake to encode your videos. You can download it from the following website.
-
-**handbrake.fr**
-
-Use the **Fast 720p30** preset for encoding.
 
 ---
 
