@@ -250,6 +250,8 @@ ssh pi@192.168.0.3
 
 Replace the IP address with the one your Pi has. Enter password (**raspberry**) when asked to do so.
 
+If you get a question about certificates, type **yes** and hit **ENTER**.
+
 ---
 
 # Connecting via PuTTY
@@ -281,6 +283,7 @@ ls -l 		List with options
 ls -al 		List including hidden files with options
 cd /my/dir  Change directory to /my/dir
 cd ..       Change directory to one level up
+cd          Go to home directory of user pi
 ```
 
 ---
@@ -307,6 +310,16 @@ nano file.txt   Edit file with nano
 ```
 
 Use **CTRL + X** to exit. Nano will ask if you sure. Hit **Y** to confirm and **ENTER** to write to the file.
+
+---
+
+# Troubleshooting
+
+In case your terminal is not behaving as expected, try to use the following key combination to exit the frozen state.
+
+**CTRL + C**
+
+If that does not help, do a hard reboot by unplugging the power source.
 
 ---
 
@@ -366,13 +379,69 @@ Press **CTRL + X** to exit. Hit **Y** to confirm changes and **ENTER** to write 
 
 ---
 
-# [fit] Keeping ofxPiMapper up to date
+# Crontab Fields
 
 ```
-cd /home/pi/openFrameworks/addons/ofxPiMapper/example
-git pull origin master
-make
+field          allowed values
+-----          --------------
+minute         0-59
+hour           0-23
+day of month   1-31
+month          1-12 
+day of week    0-7 (0 or 7 is Sunday)
 ```
+
+---
+
+# Keep ofxPiMapper up to Date
+
+Go to ofxPiMapper addon directory.
+
+```
+cd /home/pi/openFrameworks/addons/ofxPiMapper
+```
+
+Make sure you use the `stable` branch and pull in latest changes. Use the following command.
+
+```
+git branch
+```
+
+---
+
+# Pull in updates
+
+If stable branch is not present use the following.
+
+```
+git checkout -b stable
+git pull origin stable
+
+```
+
+If the stable branch is there, use this.
+
+```
+git checkout stable
+git pull origin stable
+```
+
+---
+
+# Recompile Example
+
+At this point you should recompile the example.
+
+```
+cd example
+make && make run
+```
+
+If you are using ofxPiMapper for your own project, recompile the project.
+
+
+
+
 
 ---
 
