@@ -342,9 +342,9 @@ sudo shutdown -h now
 
 ---
 
-# Launching on Boot with Cron
+# Launch on Boot with Crontab
 
-Cron is job scheduler software available on Unix-like systems like Linux. We are using Raspbian which is a Linux distribution for Raspberry Pi computers.
+Cron is job scheduler software available on UNIX-like systems.
 
 Run the following command to edit `crontab`.
 
@@ -354,20 +354,15 @@ crontab -e
 
 ---
 
-# [fit] Launching on Boot
-## Editing Crontab
+# Edit Crontab
 
-You have to add the following line in order to launch ofxPiMapper on next boot.
+Add the following to the crontab file to launch ofxPiMapper example on boot.
 
 ```
 @reboot /home/pi/openFrameworks/addons/ofxPiMapper/example/bin/example
 ```
 
-If you want to reboot once a day at midnight, add the following (the first five symbols denote: *minute*, *hour*, *day of month*, *month*, *day of week*; *\** means all)
-
-```
-0 0 * * * reboot
-```
+Press **CTRL + X** to exit. Hit **Y** to confirm changes and **ENTER** to write to file.
 
 ---
 
