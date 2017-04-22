@@ -10,7 +10,8 @@ footer: © Krisjanis Rijnieks 2017
 
 # Introduction
 
-Hello. How are you? Please introduce yourself.
+Hello. How are you? 
+Please introduce yourself.
 
 - What is your name?
 - What do you do?
