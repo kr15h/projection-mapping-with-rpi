@@ -104,14 +104,13 @@ Lunch break 13:00 - 14:00.
 
 ---
 
-# ofxPiMapper
+# Software
 
-We are going to use open source projection mapping addon for openFrameworks.
+We are going to use open source projection mapping addon for openFrameworks. **ofxPiMapper**.
 
 - Started as my MA thesis at Media Lab Helsinki
 - Integrates with openFrameworks
 - Runs also on Mac, Linux and Windows
-- Available on GitHub
 
 ---
 
