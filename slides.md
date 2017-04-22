@@ -76,6 +76,10 @@ Latvian National Museum of Art, May 2016
 
 ---
 
+# Workshop
+
+---
+
 # Day 1
 
 - Burning SD card
@@ -83,6 +87,8 @@ Latvian National Museum of Art, May 2016
 - Using own images and videos
 - A bit of command line
 - Pinch of openFrameworks
+
+Lunch break 13:00 - 14:00.
 
 ---
 
@@ -93,6 +99,8 @@ Latvian National Museum of Art, May 2016
 - Setting up your project
 - Synchronizing and projector blending
 - Backing up SD card
+
+Lunch break 13:00 - 14:00.
 
 ---
 
