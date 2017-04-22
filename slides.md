@@ -2,10 +2,9 @@ slidenumbers: true
 autoscale: true
 footer: © Krisjanis Rijnieks 2017
 
-![](images/click-festival-pi-mapper.jpg)
-
-# [fit] Mapping with the Pi
-## [fit] Projection Mapping with the Raspberry Pi
+## Projection Mapping 
+## with the 
+## Raspberry Pi
 
 ---
 
