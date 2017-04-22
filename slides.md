@@ -19,12 +19,14 @@ Please introduce yourself.
 
 ---
 
-# Krisjanis Rijnieks
+# Author
+
+Krisjanis Rijnieks.
+Some facts.
 
 - From Riga, Latvia
 - MA in Arts and Design / Media Lab Helsinki
 - Member of Pixelache Helsinki
-- Developer of ofxPiMapper
 
 ---
 
