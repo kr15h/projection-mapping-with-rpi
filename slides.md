@@ -96,7 +96,7 @@ Lunch break 13:00 - 14:00.
 
 - openFrameworks recap
 - Custom source development
-- Setting up your project
+- Setting up your Pi
 - Synchronizing and projector blending
 - Backing up SD card
 
