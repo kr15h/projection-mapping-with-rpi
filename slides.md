@@ -482,7 +482,7 @@ sudo dd if=/dev/rdiskN of=./backup.img bs=1m count=3700
 
 ---
 
-# Backink up on Windows
+# Backing up on Windows
 
 Use **Win32DiskImager** to back up your SD card.
 
