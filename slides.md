@@ -83,10 +83,10 @@ Latvian National Museum of Art, May 2016
 # Day 1
 
 - Burning SD card
-- Projection mapping
+- Exploring ofxPiMapper
 - Using own images and videos
-- A bit of command line
-- Pinch of openFrameworks
+- Command line introduction
+- openFrameworks basics
 
 Lunch break 13:00 - 14:00.
 
@@ -94,11 +94,11 @@ Lunch break 13:00 - 14:00.
 
 # Day 2
 
-- openFrameworks recap
-- Custom source development
-- Setting up your Pi
-- Synchronizing and projector blending
-- Backing up SD card
+- Custom source development with openFrameworks
+- Compiling on the Raspberry Pi
+- Autostart and scripts
+- Synchronizing multiple Pi's
+- SD card backup
 
 Lunch break 13:00 - 14:00.
 
