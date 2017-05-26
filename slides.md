@@ -116,19 +116,26 @@ We are going to use open source projection mapping addon for openFrameworks. **o
 
 # Download
 
-Go to the following web address.
-
-**ofxpimapper.com**
-
-Click on **Download latest**.
+Go to **ofxpimapper.com**, click on **Download latest**.
+It is OK to not unzip it.
 
 ---
 
-# Burning SD Card
+# Burn
 
-Please follow the link to access the instructions page.
+Use Etcher for burning your SD card.
+Download it from **etcher.io**
 
-**http://ej.uz/sd-card-burning-guides**
+---
+
+# Boot
+
+Make sure that the **last** step is plugging in the power supply.
+
+1. Insert SD card
+2. Connect and turn on the projector
+3. Connect keyboard and mouse
+4. Plug in the power
 
 ---
 
