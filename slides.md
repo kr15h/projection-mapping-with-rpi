@@ -145,8 +145,6 @@ You can find an ever updating version of keyboard shortcuts on the ofxPiMapper G
 
 **https://github.com/kr15h/ofxPiMapper**
 
-Make sure you have selected the **stable** branch.
-
 ---
 
 # Experiment
@@ -416,29 +414,10 @@ Go to ofxPiMapper addon directory.
 cd /home/pi/openFrameworks/addons/ofxPiMapper
 ```
 
-Make sure you use the `stable` branch and pull in latest changes. Use the following command.
+Use the following command to pull in latest changes.
 
 ```
-git branch
-```
-
----
-
-# Pull in updates
-
-If stable branch is not present use the following.
-
-```
-git checkout -b stable
-git pull origin stable
-
-```
-
-If the stable branch is there, use this.
-
-```
-git checkout stable
-git pull origin stable
+git pull origin master
 ```
 
 ---
@@ -449,14 +428,15 @@ At this point you should recompile the example.
 
 ```
 cd example
-make && make run
+make
 ```
 
-If you are using ofxPiMapper for your own project, recompile the project.
+When compiling done, navigate to the `bin` folder and run it.
 
-
-
-
+```
+cd bin
+./example
+```
 
 ---
 
