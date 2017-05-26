@@ -169,7 +169,6 @@ Use HandBrake to encode your videos. You can download it from the following webs
 **handbrake.fr**
 
 Use the **Fast 720p30** preset for encoding.
-Use the **Fast 1080p30** if using single video.
 
 ---
 
@@ -514,31 +513,6 @@ network={
         ssid="Your SSID"
         psk="Your password"
 }
-```
-
----
-
-# [fit] Installing openFrameworks
-
-Once you have the OS (like Raspbian) installed on your SD card, the next step is to install *openFrameworks*. To do that, follow the guide available on the official openFrameworks website.
-
-```
-http://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
-```
-
----
-
-# [fit] Installing ofxPiMapper
-
-Use the following.
-
-```
-cd /home/pi/openFrameworks/addons
-git clone https://github.com/kr15h/ofxPiMapper.git
-git clone https://github.com/jvcleave/ofxOMXPlayer.git
-git clone https://github.com/bakercp/ofxIO.git
-cd /home/pi/openFrameworks/addons/ofxPiMapper/example
-make
 ```
 
 ---
