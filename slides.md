@@ -226,6 +226,12 @@ Use the **inet addr** from before
 Username: **pi**
 Password: **raspberry**
 
+Use the RasPi config tool to change the password.
+
+```
+sudo raspi-config
+```
+
 ---
 
 # Uploading
