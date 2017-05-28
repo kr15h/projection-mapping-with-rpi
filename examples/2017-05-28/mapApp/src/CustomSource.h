@@ -12,4 +12,8 @@ public:
 	void setRadius(float newRadius);
 	
 	float radius;
+	float maxRadius;
+	
+	// For Pedro
+	ofVideoPlayer player;
 };
