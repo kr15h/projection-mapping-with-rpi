@@ -200,13 +200,13 @@ sudo reboot
 
 # Getting IP Address
 
-Use the following command to see the IP address of the Raspberry Pi wireless network adapter.
+Use the following command to see the IP address of your Raspberry Pi.
 
 ```
-ifconfig
+hostname -I
 ```
 
-Look for **wlan0** and **inet addr**. It should look like **192.168.0.3** Note it down somewhere.
+You should see output similar to **192.168.0.3**. Note it down somewhere.
 
 ---
 
