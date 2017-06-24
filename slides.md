@@ -432,7 +432,7 @@ cd bin
 
 ---
 
-# Uploading Basic Examples
+# Uploading Your App
 
 1. Connect to Pi with **FileZilla** or **WinSCP**
 2. /home/pi/openFrameworks/apps/myApps
@@ -440,7 +440,7 @@ cd bin
 
 ---
 
-# Compiling Basic Examples
+# Compiling Your App
 
 1. Use **Terminal** or **PuTTY** to connect to your Pi
 2. cd /home/pi/openFrameworks/apps/myApps/**yourApp**
