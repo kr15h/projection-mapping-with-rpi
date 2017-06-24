@@ -342,20 +342,6 @@ If that does not help, do a hard reboot by unplugging the power source.
 
 ---
 
-# Keeping System up to Date
-
-Use the following commands to update your Raspberry Pi.
-
-```
-sudo apt-get clean
-sudo apt-get update
-sudo apt-get upgrade
-```
-
-The *update* and *upgrade* commands will take a while. That's normal.
-
----
-
 # Powering up and down
 
 Use one of the following to **reboot**.
@@ -459,6 +445,20 @@ cd bin
 1. Use **Terminal** or **PuTTY** to connect to your Pi
 2. cd /home/pi/openFrameworks/apps/myApps/**yourApp**
 3. type **make** and when it completes **make run**
+
+---
+
+# Keeping System up to Date
+
+Use the following commands to update your Raspberry Pi.
+
+```
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+The *update* and *upgrade* commands will take a while. That's normal.
 
 ---
 
