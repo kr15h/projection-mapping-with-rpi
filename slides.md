@@ -82,13 +82,11 @@ Latvian National Museum of Art, May 2016
 
 # Day 1
 
-- Burning SD card
+- Preparing the SD card
 - Exploring ofxPiMapper
-- Using own images and videos
-- Command line introduction
+- Using your own images and videos
+- Introduction to command line interface
 - openFrameworks basics
-
-Lunch break 13:00 - 14:00.
 
 ---
 
@@ -100,17 +98,15 @@ Lunch break 13:00 - 14:00.
 - Synchronizing multiple Pi's
 - SD card backup
 
-Lunch break 13:00 - 14:00.
-
 ---
 
 # Software
 
 We are going to use open source projection mapping addon for openFrameworks. **ofxPiMapper**.
 
-- Started as my MA thesis at Media Lab Helsinki
+- Started as MA thesis at Media Lab Helsinki
 - Integrates with openFrameworks
-- Runs also on Mac, Linux and Windows
+- Runs on Linux as well as Mac and Windows
 
 ---
 
@@ -151,7 +147,7 @@ You can find an ever updating version of keyboard shortcuts on the ofxPiMapper G
 
 ---
 
-# Own Sources
+# Using Own Sources
 
 Find some image and / or video sources that you want to use. 
 
@@ -182,6 +178,26 @@ Website: **ffmpeg.org**
 
 ---
 
+# Uploading Sources
+
+It is easiest to put files on USB thumb drive.
+
+1. Copy files to USB thumb drive
+2. Plug the USB drive into Rasbberry Pi
+3. Reboot the Raspberry Pi
+
+Sources will be copied from USB drive to SD card.
+
+---
+
+# Advanced Setup
+
+In order to get the most out of it, we have to configure Raspberry Pi network connection.
+
+Type: **ext** to enter the command line interface (CLI) of the Raspberry Pi.
+
+---
+
 # Configure WiFi
 
 Use the following command on the Raspberry Pi.
@@ -190,7 +206,28 @@ Use the following command on the Raspberry Pi.
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Replace with your network credentials. Hit CTRL+X and Y and ENTER to save and exit. Use the following to reboot.
+---
+
+# Editing WiFi Config
+
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+Change the `ssid` and `psk`.
+
+```
+network={
+        ssid="YOUR_SSID"
+        psk="YOUR_PASSWORD"
+}
+```
+
+---
+
+# Finalizing WiFi Setup
+
+Replace with your network credentials. Hit **CTRL+X** and **Y** and **ENTER** to save and exit. Use the following to reboot.
 
 ```
 sudo reboot
@@ -210,12 +247,24 @@ You should see output similar to **192.168.0.3**. Note it down somewhere.
 
 ---
 
-# Getting a SFTP Client
+# Uploading via SFTP
 
 Raspberry Pi uses the **S**ecure **SH**ell protocol and that works with file transfers as well. Get one of the following.
 
 **FileZilla** (filezilla-project.org)
 **WinSCP** Windows only (winscp.net)
+
+---
+
+# Using SCP
+
+You can also use the command line interface to upload files. 
+
+```
+scp movie-a.mp4 movie-b.mp4 \
+pi@192.168.0.3:/home/pi/openFrameworks/addons/\
+ofxPiMapper/example/bin/data/sources/videos/
+```
 
 ---
 
@@ -283,16 +332,6 @@ Use the following credentials to establish connection.
 
 ---
 
-# Killing the Example App
-
-In order to stop the running ofxPiMapper example application, run this command.
-
-```
-sudo killall example
-```
-
----
-
 # Command Line 101
 
 ```
@@ -338,7 +377,7 @@ In case your terminal is not behaving as expected, try to use the following key 
 
 **CTRL + C**
 
-If that does not help, do a hard reboot by unplugging the power source.
+If that does not help, do a **hard reboot** by unplugging the power source.
 
 ---
 
@@ -348,14 +387,12 @@ Use one of the following to **reboot**.
 
 ```
 sudo reboot
-sudo shutdown -r now
 ```
 
 Use one of the following to **shutdown**.
 
 ```
 sudo halt
-sudo shutdown -h now
 ```
 
 ---
@@ -387,13 +424,29 @@ Press **CTRL + X** to exit. Hit **Y** to confirm changes and **ENTER** to write 
 # Crontab Fields
 
 ```
-field          allowed values
+Field          Allowed values
 -----          --------------
 minute         0-59
 hour           0-23
 day of month   1-31
 month          1-12 
 day of week    0-7 (0 or 7 is Sunday)
+```
+
+---
+
+# Crontab Example
+
+For example, launch a script **every day on 13:15**
+
+```
+15 13 * * * /home/pi/script.sh
+```
+
+Make sure you have set the **execute permissions** of the file, to d that use the line below.
+
+```
+chmod a+x /home/pi/script.sh
 ```
 
 ---
@@ -420,14 +473,18 @@ At this point you should recompile the example.
 
 ```
 cd example
-make
+make && make run
 ```
 
-When compiling done, navigate to the `bin` folder and run it.
+---
+
+# Going Fullscreen
+
+When compiling done, navigate to the `bin` folder and run it with the **-f** flag.
 
 ```
 cd bin
-./example
+./example -f
 ```
 
 ---
@@ -483,23 +540,6 @@ Use **Win32DiskImager** to back up your SD card.
 3. Select where to save the **_.img** on disk
 4. Click **Open**
 5. Click **Read**
-
----
-
-# Changing WiFi Network
-
-```
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
-```
-
-Change the `ssid` and `psk`.
-
-```
-network={
-        ssid="Your SSID"
-        psk="Your password"
-}
-```
 
 ---
 
