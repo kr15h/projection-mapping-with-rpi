@@ -1,0 +1,47 @@
+<surfaces>
+    <surface type="1">
+        <vertices>
+            <vertex>
+                <x>187.000000000</x>
+                <y>141.000000000</y>
+            </vertex>
+            <vertex>
+                <x>705.000000000</x>
+                <y>135.000000000</y>
+            </vertex>
+            <vertex>
+                <x>627.025878906</x>
+                <y>505.930419922</y>
+            </vertex>
+            <vertex>
+                <x>204.502105713</x>
+                <y>523.051696777</y>
+            </vertex>
+        </vertices>
+        <texCoords>
+            <texCoord>
+                <x>0.165999994</x>
+                <y>0.150000006</y>
+            </texCoord>
+            <texCoord>
+                <x>0.850000024</x>
+                <y>0.150000006</y>
+            </texCoord>
+            <texCoord>
+                <x>0.850000024</x>
+                <y>0.825999975</y>
+            </texCoord>
+            <texCoord>
+                <x>0.165999994</x>
+                <y>0.825999975</y>
+            </texCoord>
+        </texCoords>
+        <source>
+            <source-type>fbo</source-type>
+            <source-name>Aplis</source-name>
+        </source>
+        <properties>
+            <perspectiveWarping>1</perspectiveWarping>
+        </properties>
+    </surface>
+</surfaces>
