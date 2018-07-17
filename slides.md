@@ -1,17 +1,17 @@
 slidenumbers: true
 autoscale: true
-footer: © Krisjanis Rijnieks 2017
+footer: © Krisjanis Rijnieks 2018
 
 ## Projection Mapping 
 ## with the 
 ## Raspberry Pi
+#### Krisjanis Rijnieks / Fab14 / 2018
 
 ---
 
 # Introduction
 
-Hello. How are you? 
-Please introduce yourself.
+Hello.
 
 - What is your name?
 - What do you do?
@@ -19,9 +19,8 @@ Please introduce yourself.
 
 ---
 
-# Author
+# Krisjanis Rijnieks
 
-Krisjanis Rijnieks.
 Some facts.
 
 - From Riga, Latvia
@@ -40,39 +39,27 @@ Projects range in complexity and usually include a combination of the following.
 
 ---
 
-The Thirsty Trees, February 2017
-
-![fit loop autoplay](videos/trees.mp4)
-
----
-
-The Portal Project, December 2016
-
-![fit loop autoplay](videos/portal.mp4)
-
----
-
 Maker in Residence, December 2016
 
 ![fit loop autoplay](videos/mir.mp4)
 
 ---
 
-Staro Riga Festival, November 2016
+The Thirsty Trees, February 2017
 
-![fit loop autoplay](videos/staro.mp4)
-
----
-
-SUDO, Summer 2016
-
-![fit loop autoplay](videos/sudo.mp4)
+![fit loop autoplay](videos/trees.mp4)
 
 ---
 
-Latvian National Museum of Art, May 2016
+uMap and Fab Academy, June 2018
 
-![fit loop autoplay](videos/lnmm.mp4)
+![fit loop autoplay](videos/fabacademy.mp4)
+
+---
+
+## rijnieks.com
+
+^ Find out more on my website
 
 ---
 
@@ -80,23 +67,21 @@ Latvian National Museum of Art, May 2016
 
 ---
 
-# Day 1
+# Day 01
 
 - Preparing the SD card
 - Exploring ofxPiMapper
 - Using your own images and videos
-- Introduction to command line interface
-- openFrameworks basics
 
 ---
 
-# Day 2
+# Day 02
 
-- Custom source development with openFrameworks
+- Programming with openFrameworks
 - Compiling on the Raspberry Pi
 - Autostart and scripts
-- Synchronizing multiple Pi's
-- SD card backup
+
+^ Here we will learn to how to create interactive, generative and data-driven texture sources for projection mapping.
 
 ---
 
@@ -110,10 +95,9 @@ We are going to use open source projection mapping addon for openFrameworks. **o
 
 ---
 
-# Download
+# Copy Files
 
-Go to **ofxpimapper.com**, click on **Download latest**.
-It is OK to not unzip it.
+Get the radical **SD card** and copy the **opm.img.zip** file to your Desktop.
 
 ---
 
@@ -126,12 +110,26 @@ Download it from **etcher.io**
 
 # Boot
 
-Make sure that the **last** step is plugging in the power supply.
+Make sure that the **LAST STEP** is plugging in the power supply.
 
 1. Insert SD card
 2. Connect and turn on the projector
-3. Connect keyboard and mouse
+3. Connect keyboard and mouse (and gamepad)
 4. Plug in the power
+
+---
+
+# Shortcuts
+
+|--- |--- |--- |--- |
+|---  |---       |---  |---       |
+| **3** | Mapping mode      | **TAB** | Change texture |
+| **2** | Texture mode      | **SPACE** | Pause video source |
+| **1** | Presentation mode | **BACKSPACE** | Delete surface |
+|--- |--- |--- |--- |
+| **T** |Create triangle | **I** | Show info |
+| **Q** | Create quad    | **D** | Duplicate surface |
+| **C** | Create circle  | **Z** | Undo |
 
 ---
 
@@ -144,6 +142,10 @@ You can find an ever updating version of keyboard shortcuts on the ofxPiMapper G
 ---
 
 # Experiment
+
+---
+
+#### This slide has been left blank intentionally. 
 
 ---
 
@@ -166,6 +168,29 @@ Use the **Fast 720p30** preset for encoding.
 
 ---
 
+# Stealing Videos from YouTube
+
+Stealing is not good, but sometimes useful. Remember Picaso once said: Good artists copy, great artists STEAL.
+
+---
+
+## Using VLC
+
+- Open VLC. Go to File / Open Network.
+- Click on Window / Media Info.
+- Copy the Location field value.
+
+---
+
+## Use **ssyoutube.com** instead of **youtube.com**
+
+- Open your favorite web browser software.
+- Go to youtube.com and look for your video.
+- Once found, add ss in front of youtube.com.
+- Download your video.
+
+---
+
 # Encoding with FFmpeg
 
 In case you decide to use **FFmpeg** (cross-platform solution to record, convert and stream audio and video), here is a basic command you can use.
@@ -178,19 +203,39 @@ Website: **ffmpeg.org**
 
 ---
 
-# Uploading Sources
+# Cutting Video w/ ffmpeg
 
-It is easiest to put files on USB thumb drive.
+the `-ss` parameter tells where to start to cut and the `-t` defines how long is the slice you want to cut from there.
 
-1. Copy files to USB thumb drive
-2. Plug the USB drive into Rasbberry Pi
-3. Reboot the Raspberry Pi
-
-Sources will be copied from USB drive to SD card.
+```
+ffmpeg -i flower.mov -ss 00:00:02 -t 00:01:00 flower.mp4
+```
 
 ---
 
-# Advanced Setup
+# Crop Video w/ ffmpeg
+
+Here you focus on the `crop=...` part. The structure is the following `crop=width:height:x:y`. The final video is going to be in the size of `width` and `height`. The `x` and `y` defines where we start to cut the video.
+
+```
+ffmpeg -i "sprites.mov" -filter:v "crop=640:570:0:35" "sprites.mp4" 
+```
+
+--- 
+
+# Speeding up Video with ffmpeg
+
+Replace the `4` and `4x` with a multiplier (how many times you want to upspeed your video).
+
+```
+ffmpeg -i "original.mp4" -filter:v "setpts=PTS/4" "upspeed-4x.mp4"
+```
+
+What happens here is that a ffmpeg filter is used to `setpts` `N` times less than the original `PTS` (Presentation Time Stamp).
+
+---
+
+# Network Setup
 
 In order to get the most out of it, we have to configure Raspberry Pi network connection.
 
@@ -198,7 +243,7 @@ Type: **ext** to enter the command line interface (CLI) of the Raspberry Pi.
 
 ---
 
-# Configure WiFi
+# WiFi Configuration
 
 Use the following command on the Raspberry Pi.
 
@@ -220,6 +265,19 @@ Change the `ssid` and `psk`.
 network={
         ssid="YOUR_SSID"
         psk="YOUR_PASSWORD"
+}
+```
+
+---
+
+# Unsecured Networks
+
+In case your WiFi network is open, use the following.
+
+```
+network={
+        ssid="YOUR_SSID"
+        key_mgmt=NONE
 }
 ```
 
@@ -256,14 +314,23 @@ Raspberry Pi uses the **S**ecure **SH**ell protocol and that works with file tra
 
 ---
 
+# Credentials
+
+Host: 192.168.1.XXX
+Username: pi
+Password: raspberry
+Port: 22
+
+---
+
 # Using SCP
 
-You can also use the command line interface to upload files. 
+You can also use the command line interface to upload files. The following will upload `movie-a.mp4` and `movie-b.mp4` to the `example_gamepad` video source folder.
 
 ```
 scp movie-a.mp4 movie-b.mp4 \
 pi@192.168.0.3:/home/pi/openFrameworks/addons/\
-ofxPiMapper/example/bin/data/sources/videos/
+ofxPiMapper/example_gamepad/bin/data/sources/videos/
 ```
 
 ---
@@ -275,7 +342,7 @@ Use the **inet addr** from before
 Username: **pi**
 Password: **raspberry**
 
-Use the RasPi config tool to change the password.
+If you want to be safe, use the RasPi config tool to change the password.
 
 ```
 sudo raspi-config
@@ -288,7 +355,7 @@ sudo raspi-config
 ```
 /home/pi
 /openFrameworks/addons
-/ofxPiMapper/example/bin/data/sources
+/ofxPiMapper/example_gamepad/bin/data/sources
 ```
 
 Put images and videos in the respective folders. Reboot.
@@ -397,6 +464,47 @@ sudo halt
 
 ---
 
+# openFrameworks Basics
+
+Download latest **release** version of openFrameworks.
+
+**openframeworks.cc/download**
+
+---
+
+# Project Generator
+
+Use the **Project Generator** located in **projectGenerator** to set the root of openFrameworks and create a new project.
+
+You can find the project in the **apps/myApps** directory after.
+
+---
+
+# Learning openFrameworks
+
+Use the following sources to find documentation about available functionality of openFrameworks.
+
+- openframeworks.cc/documentation
+- openframeworks.cc/learning
+
+---
+
+# Exploring openFrameworks Examples
+
+Do explore the openFrameworks examples located in the **examples** directory of openFrameworks.
+
+---
+
+# Learning C++
+
+Even the hardest coconuts in the field of C++ do look up the language reference and they do it often. Use the following sources to find answers.
+
+- cppreference.com
+- cplusplus.com
+- stackoverflow.com
+
+---
+
 # Launch on Boot with Crontab
 
 Cron is job scheduler software available on UNIX-like systems.
@@ -451,44 +559,6 @@ chmod a+x /home/pi/script.sh
 
 ---
 
-# Keep ofxPiMapper up to Date
-
-Go to ofxPiMapper addon directory.
-
-```
-cd /home/pi/openFrameworks/addons/ofxPiMapper
-```
-
-Use the following command to pull in latest changes.
-
-```
-git pull origin master
-```
-
----
-
-# Recompile Example
-
-At this point you should recompile the example.
-
-```
-cd example
-make && make run
-```
-
----
-
-# Going Fullscreen
-
-When compiling done, navigate to the `bin` folder and run it with the **-f** flag.
-
-```
-cd bin
-./example -f
-```
-
----
-
 # Uploading Your App
 
 1. Connect to Pi with **FileZilla** or **WinSCP**
@@ -502,6 +572,19 @@ cd bin
 1. Use **Terminal** or **PuTTY** to connect to your Pi
 2. cd /home/pi/openFrameworks/apps/myApps/**yourApp**
 3. type **make** and when it completes **make run**
+
+---
+
+# Enabling Audio via HDMI
+
+Open the `src/ofApp.cpp` source file and add the following in the `ofApp::setup()` function.
+
+```
+ofx::piMapper::VideoSource::enableAudio = true;
+ofx::piMapper::VideoSource::useHDMIForAudio = true;
+```
+
+Save the file and recompile the app or example by using `make`.
 
 ---
 
@@ -543,8 +626,20 @@ Use **Win32DiskImager** to back up your SD card.
 
 ---
 
+# Open Source Animation Tools
+
+- https://www.synfig.org/
+- https://www.pencil2d.org/
+- https://natron.fr/
+
+---
+
 # Thank you!
 
-If you notice that something is missing, please add an issue.
+Please send me your email to the following address.
 
-[^1]: Image source: Google Cultural Institute
+```
+krisjanis@rijnieks.com
+```
+
+
