@@ -383,6 +383,33 @@ sudo reboot
 
 ---
 
+# openFrameworks Basics
+
+Download latest **release** version of openFrameworks.
+
+**openframeworks.cc/download**
+
+---
+
+# Learning openFrameworks
+
+Use the following sources to find documentation about available functionality of openFrameworks.
+
+- openframeworks.cc/documentation
+- openframeworks.cc/learning
+
+---
+
+# Learning C++
+
+Even the hardest coconuts in the field of C++ do look up the language reference and they do it often. Use the following sources to find answers.
+
+- cppreference.com
+- cplusplus.com
+- stackoverflow.com
+
+---
+
 # openFrameworks Versions
 
 openFrameworks comes as a folder. It is a good idea to keep the version numbers and develop you applications against a speciffic version.
@@ -408,7 +435,7 @@ openFrameworks comes as a folder. It is a good idea to keep the version numbers 
 
 ---
 
-# Apps
+# openFrameworks Apps
 
 The default way to build an openFrameworks app is to place it **3 levels** under the root folder of openFrameworks.
 
@@ -420,7 +447,7 @@ openFrameworks/apps/myApps/myApp
 
 ---
 
-# Examples
+# openFrameworks Examples
 
 Examples also keep the same structure (**3 levels** below root).
 
@@ -430,7 +457,7 @@ openFrameworks/examples/3d/advanced3dExample
 
 ---
 
-# Addons
+# openFrameworks Addons
 
 The same goes for examples related to addons (**3 levels** below root).
 
@@ -440,7 +467,7 @@ openFrameworks/addons/ofxPiMapper/example_basic
 
 ---
 
-# Creating a Project
+# Creating new App
 
 You can also copy the **emptyExample** and rename it.
 
@@ -452,6 +479,32 @@ ls
 ├── emptyExample
 └── myApp
 ```
+
+---
+
+# Compiling an App
+
+There are many different IDE's that use different strategies to compile app source code into an actual application.
+
+An universal way is to use **make**.
+
+```
+cd apps/myApps/myApp
+make
+```
+
+---
+
+# Running an App
+
+After compilation your app is being placed in the project **bin** folder.
+
+```
+cd apps/myApps/myApp/bin
+./myApp
+```
+
+> It is possible that the app has an extension such as **myApp.app** or **myApp.exe**. 
 
 ---
 
@@ -576,47 +629,6 @@ Use one of the following to **shutdown**.
 ```
 sudo halt
 ```
-
----
-
-# openFrameworks Basics
-
-Download latest **release** version of openFrameworks.
-
-**openframeworks.cc/download**
-
----
-
-# Project Generator
-
-Use the **Project Generator** located in **projectGenerator** to set the root of openFrameworks and create a new project.
-
-You can find the project in the **apps/myApps** directory after.
-
----
-
-# Learning openFrameworks
-
-Use the following sources to find documentation about available functionality of openFrameworks.
-
-- openframeworks.cc/documentation
-- openframeworks.cc/learning
-
----
-
-# Exploring openFrameworks Examples
-
-Do explore the openFrameworks examples located in the **examples** directory of openFrameworks.
-
----
-
-# Learning C++
-
-Even the hardest coconuts in the field of C++ do look up the language reference and they do it often. Use the following sources to find answers.
-
-- cppreference.com
-- cplusplus.com
-- stackoverflow.com
 
 ---
 
