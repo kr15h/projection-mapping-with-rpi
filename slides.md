@@ -263,8 +263,9 @@ Change the `ssid` and `psk`.
 
 ```
 network={
-        ssid="YOUR_SSID"
-        psk="YOUR_PASSWORD"
+        ssid="opm"
+        key_mgmt=WPA-PSK
+        psk="raspberry"
 }
 ```
 
@@ -325,12 +326,12 @@ Port: 22
 
 # Using SCP
 
-You can also use the command line interface to upload files. The following will upload `movie-a.mp4` and `movie-b.mp4` to the `example_gamepad` video source folder.
+You can also use the command line interface to upload files. The following will upload `movie-a.mp4` and `movie-b.mp4` to the `example_basic` video source folder.
 
 ```
 scp movie-a.mp4 movie-b.mp4 \
 pi@192.168.0.3:/home/pi/openFrameworks/addons/\
-ofxPiMapper/example_gamepad/bin/data/sources/videos/
+ofxPiMapper/example_basic/bin/data/sources/videos/
 ```
 
 ---
@@ -355,7 +356,7 @@ sudo raspi-config
 ```
 /home/pi
 /openFrameworks/addons
-/ofxPiMapper/example_gamepad/bin/data/sources
+/ofxPiMapper/example_basic/bin/data/sources
 ```
 
 Put images and videos in the respective folders. Reboot.
@@ -363,6 +364,120 @@ Put images and videos in the respective folders. Reboot.
 ```
 sudo reboot
 ```
+
+---
+
+# openFrameworks
+
+---
+
+# What is openFrameworks?
+
+**openFrameworks** is a unified bundle of open source **C++** libraries to make the life of media professional easier.
+
+---
+
+# What is in the box?
+
+**openFrameworks** provides a unified way of using different libraries to manipulate sound, image, videos and use open tools from fields such as computer vision and machine learning.
+
+---
+
+# openFrameworks Versions
+
+openFrameworks comes as a folder. It is a good idea to keep the version numbers and develop you applications against a speciffic version.
+
+```
+./openFrameworks/
+├── of_v0.10.0_osx_release
+├── of_v0.9.3_osx_release
+├── of_v0.9.4_osx_release
+├── of_v0.9.8_ios_release
+└── ...
+```
+
+---
+
+# Core Folder Structure
+
+- **apps** This is where you build your applications.
+- **examples** This is where you learn from.
+- **addons** This is where you put additional features.
+- **libs** This is where the libraries (including openFrameworks) live.
+- **scripts** Here you can find setup scripts for all supported platforms.
+
+---
+
+# Apps
+
+The default way to build an openFrameworks app is to place it **3 levels** under the root folder of openFrameworks.
+
+```
+openFrameworks/apps/myApps/myApp
+```
+
+^ This is because the project configuration files will look for all the needed components starting from the directory 3 levels above its own.
+
+---
+
+# Examples
+
+Examples also keep the same structure (**3 levels** below root).
+
+```
+openFrameworks/examples/3d/advanced3dExample
+```
+
+---
+
+# Addons
+
+The same goes for examples related to addons (**3 levels** below root).
+
+```
+openFrameworks/addons/ofxPiMapper/example_basic
+```
+
+---
+
+# Creating a Project
+
+You can also copy the **emptyExample** and rename it.
+
+```
+cd apps/myApps
+cp -R emptyExample myApp
+ls
+./
+├── emptyExample
+└── myApp
+```
+
+---
+
+# Project Generator
+
+You can find the openFrameworks project generator in the **projectGenerator** folder. 
+
+You can use it to create a new project, but it does not always come precompiled.
+
+---
+
+# App Structure
+
+- **src** This is where the C++ source files live.
+- **bin** Compiled application is stored here.
+- **bin/data** Put files to be loaded in your app here.
+- **addons.make** List of addons to be compiled before.
+- **Makefile** Instructions for compiling with **make**.
+
+The rest of files are platform specific project files.
+
+---
+
+# Command Line Interface (CLI)
+
+^ Also known as CLI
 
 ---
 
